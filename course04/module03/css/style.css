@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { 
+  font-family: Helvetica;
+}
+
+h1 {
+  font-size: 175%;
+  margin-top: 30px;
+}
+
+.item {
+  position: relative;
+  border: solid 1px;
+  background-color: grey;
+  padding: 30px 10px 10px 10px;
+  height: 1000px;
+}
+
+.item-title {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 120px;
+  border: solid black;
+  border-width: 0px 0px 1px 1px;
+  text-align: center;
+  font-size: 125%;
+}
+
+.item-title-pink {
+  background-color: pink;
+}
+
+.item-title-red {
+  background-color: red;
+  color: white;
+}
+
+.item-title-yellow {
+  background-color: khaki;
+}
