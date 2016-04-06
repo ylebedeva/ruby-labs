@@ -17,12 +17,17 @@ h1 {
   position: relative;
   border: solid 1px;
   background-color: grey;
-  padding: 30px 10px 10px 10px;
-  height: 1000px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.item > p {
+  margin-top: 20px;
 }
 
 .item-title {
   position: absolute;
+  margin: 0px;
   top: 0px;
   right: 0px;
   width: 120px;
