@@ -1,0 +1,89 @@
+<%= form_for(@entrant) do |f| %>
+  <% if @entrant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entrant.errors.count, "error") %> prohibited this entrant from being saved:</h2>
+
+      <ul>
+      <% @entrant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :secs %><br>
+    <%= f.text_field :secs %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :bib %><br>
+    <%= f.text_field :bib %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :gender_place %><br>
+    <%= f.text_field :gender_place %>
+  </div>
+  <div class="field">
+    <%= f.label :group %><br>
+    <%= f.text_field :group %>
+  </div>
+  <div class="field">
+    <%= f.label :group_place %><br>
+    <%= f.text_field :group_place %>
+  </div>
+  <div class="field">
+    <%= f.label :swim %><br>
+    <%= f.text_field :swim %>
+  </div>
+  <div class="field">
+    <%= f.label :pace_1000 %><br>
+    <%= f.text_field :pace_1000 %>
+  </div>
+  <div class="field">
+    <%= f.label :t1 %><br>
+    <%= f.text_field :t1 %>
+  </div>
+  <div class="field">
+    <%= f.label :bike %><br>
+    <%= f.text_field :bike %>
+  </div>
+  <div class="field">
+    <%= f.label :mph %><br>
+    <%= f.text_field :mph %>
+  </div>
+  <div class="field">
+    <%= f.label :t2 %><br>
+    <%= f.text_field :t2 %>
+  </div>
+  <div class="field">
+    <%= f.label :run %><br>
+    <%= f.text_field :run %>
+  </div>
+  <div class="field">
+    <%= f.label :min_mile %><br>
+    <%= f.text_field :min_mile %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
