@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Entrants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Secs</th>
+      <th>Name</th>
+      <th>Bib</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Gender</th>
+      <th>Gender place</th>
+      <th>Group</th>
+      <th>Group place</th>
+      <th>Swim</th>
+      <th>Pace 1000</th>
+      <th>T1</th>
+      <th>Bike</th>
+      <th>Mph</th>
+      <th>T2</th>
+      <th>Run</th>
+      <th>Min mile</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entrants.each do |entrant| %>
+      <tr>
+        <td><%= entrant.place %></td>
+        <td><%= entrant.secs %></td>
+        <td><%= entrant.name %></td>
+        <td><%= entrant.bib %></td>
+        <td><%= entrant.city %></td>
+        <td><%= entrant.state %></td>
+        <td><%= entrant.gender %></td>
+        <td><%= entrant.gender_place %></td>
+        <td><%= entrant.group %></td>
+        <td><%= entrant.group_place %></td>
+        <td><%= entrant.swim %></td>
+        <td><%= entrant.pace_1000 %></td>
+        <td><%= entrant.t1 %></td>
+        <td><%= entrant.bike %></td>
+        <td><%= entrant.mph %></td>
+        <td><%= entrant.t2 %></td>
+        <td><%= entrant.run %></td>
+        <td><%= entrant.min_mile %></td>
+        <td><%= link_to 'Show', entrant %></td>
+        <td><%= link_to 'Edit', edit_entrant_path(entrant) %></td>
+        <td><%= link_to 'Destroy', entrant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entrant', new_entrant_path %>
