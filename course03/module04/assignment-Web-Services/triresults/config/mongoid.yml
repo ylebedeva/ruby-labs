@@ -135,3 +135,9 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+development:
+  clients:
+    default:
+      database: triresults_dev
+      hosts:
+        - localhost:27017

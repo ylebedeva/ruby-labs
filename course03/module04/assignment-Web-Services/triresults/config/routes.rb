@@ -53,8 +53,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :racers do
-    post 'entries' => 'racers#create_entry'
+
+  namespace :api do
+    resources :racers, only: [:show, :index] do
+      resources :entries, only: [:show, :index]
+    end
+    resources :races do
+      resources :results, only: [:show, :index, :update]
+    end
   end
-  resources :races
 end
